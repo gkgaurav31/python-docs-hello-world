@@ -29,6 +29,8 @@ jobs:
         sudo apt update
         sudo apt install -y python-pypdf2
         sudo pip install numpy
+        sudo apt-get install build-essential manpages-dev unixodbc-dev -y
+        sudo apt-get install gfortran
 
     - name: Install dependencies
       run: pip install -r requirements.txt
