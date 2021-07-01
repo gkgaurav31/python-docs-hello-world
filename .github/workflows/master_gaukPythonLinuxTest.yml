@@ -25,6 +25,7 @@ jobs:
     - name: Custom Commands
       run : | 
         sudo apt update
+        sudo pip install --upgrade numpy
         sudo pip install numpy
         sudo apt-get install build-essential manpages-dev unixodbc-dev -y
         sudo apt-get install gfortran
