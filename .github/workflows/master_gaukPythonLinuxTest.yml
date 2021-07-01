@@ -25,12 +25,8 @@ jobs:
     - name: Custom Commands
       run : | 
         sudo apt update
-        sudo apt install python-numpy
-        sudo pip install --upgrade numpy
-        sudo pip install numpy
         sudo apt-get install build-essential manpages-dev unixodbc-dev -y
         sudo apt-get install gfortran
-        sudo pip3 install --upgrade numpy
         /opt/hostedtoolcache/Python/3.8.10/x64/bin/python -m pip install numpy
     
     - name: Create and start virtual environment
