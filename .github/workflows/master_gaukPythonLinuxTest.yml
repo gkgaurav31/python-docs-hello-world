@@ -22,12 +22,6 @@ jobs:
       with:
         python-version: '3.6'
 
-    - name: Create and start virtual environment
-      run: |
-        python -m venv venv
-        source venv/bin/activate
-
-  
     - name: Custom Commands
       run : | 
         sudo apt update
@@ -35,6 +29,11 @@ jobs:
         sudo apt-get install build-essential manpages-dev unixodbc-dev -y
         sudo apt-get install gfortran
     
+    - name: Create and start virtual environment
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+
     - name: Install dependencies
       run: pip install -r requirements.txt
 
