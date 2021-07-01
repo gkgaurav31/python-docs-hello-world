@@ -26,8 +26,8 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
-        apt update
-        apt install -y python-pypdf2
+        sudo apt update
+        sudo apt install -y python-pypdf2
 
     - name: Install dependencies
       run: pip install -r requirements.txt
