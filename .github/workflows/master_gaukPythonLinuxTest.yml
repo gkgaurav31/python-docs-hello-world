@@ -34,6 +34,11 @@ jobs:
       run: |
         python -m venv venv
         source venv/bin/activate
+        sudo apt update
+        sudo apt-get install build-essential manpages-dev unixodbc-dev -y
+        sudo apt-get install gfortran -y
+        sudo apt-get install libgfortran5 -y
+        sudo python -m pip install numpy
         python -m pip install numpy
         python -m pip install pybdf
 
