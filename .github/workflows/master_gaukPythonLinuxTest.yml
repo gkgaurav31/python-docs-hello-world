@@ -29,6 +29,7 @@ jobs:
         sudo apt-get install gfortran -y
         sudo apt-get install libgfortran5 -y
         sudo python -m pip install numpy
+        python -m pip install pybdf
             
     - name: Create and start virtual environment
       run: |
