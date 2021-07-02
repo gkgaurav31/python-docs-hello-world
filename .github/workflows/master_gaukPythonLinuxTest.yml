@@ -28,23 +28,12 @@ jobs:
         sudo apt-get install build-essential manpages-dev unixodbc-dev -y
         sudo apt-get install gfortran -y
         sudo apt-get install libgfortran5 -y
-        sudo python -m pip install numpy
-        sudo apt install python-numpy
         /opt/hostedtoolcache/Python/3.7.10/x64/bin/python -m pip install numpy
-        python -m pip install pybdf
-            
+
     - name: Create and start virtual environment
       run: |
         python -m venv venv
         source venv/bin/activate
-        sudo apt update
-        sudo apt-get install build-essential manpages-dev unixodbc-dev -y
-        sudo apt-get install gfortran -y
-        sudo apt-get install libgfortran5 -y
-        sudo python -m pip install numpy
-        python -m pip install numpy
-        sudo pip3 install numpy
-        python -m pip install pybdf
 
     - name: Install dependencies
       run: pip install -r requirements.txt
